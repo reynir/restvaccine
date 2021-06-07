@@ -21,14 +21,14 @@ LOCATION = '//*[@id="a268ffc4-333e-4813-ae3f-9d9f40c40200"]/fieldset/label[1]/in
 #####################################################
 
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-driver = webdriver.Chrome(options=chrome_options)
+firefox_options = Options()
+firefox_options.add_argument("--headless")
+driver = webdriver.Firefox(options=firefox_options)
 start_url = "https://www.auh.dk/om-auh/tilbud-om-covid-vaccination-ved-brug-af-restvacciner/"
 driver.get(start_url)
 
